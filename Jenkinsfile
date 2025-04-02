@@ -1,20 +1,28 @@
 pipeline {
     agent any
+    tools {
+        maven 'maven-3.9.6'
+    }
     stages {
-        stage('Checkout') {
+        stage('Git Checkout') {
             steps {
-                git url: 'https://github.com/SagarBarate/microservice-cicd-pipeline.git/Shipment-service', branch: 'production'
+                // Clones the repository and checks out the specified branch
+                checkout scmGit(branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/SagarBarate/Shipment-service.git']])
+                echo 'Git Checkout Completed'
             }
         }
-        stage('Build') {
+        stage('Maven Build') {
             steps {
-                sh "mvn clean install"
+                // Clean and package the project, generating a deployable artifact (JAR/WAR)
+                sh 'mvn clean package -DskipTests'
+                echo 'Maven Build Completed'
             }
         }
-        stage('Archive') {
-            steps {
-                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
-            }
+    }
+    post {
+        always {
+            // Archive the generated artifact if needed for later stages or review
+            archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
         }
     }
 }
