@@ -1,0 +1,4 @@
+com\tus\logistics\service\ShipmentService.class
+com\tus\logistics\service\Shipment.class
+com\tus\logistics\service\NotificationService.class
+com\tus\logistics\repository\ShipmentRepository.class

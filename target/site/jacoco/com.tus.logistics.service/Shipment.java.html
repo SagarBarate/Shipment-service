@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Shipment.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Shipment Service</a> &gt; <a href="index.source.html" class="el_package">com.tus.logistics.service</a> &gt; <span class="el_source">Shipment.java</span></div><h1>Shipment.java</h1><pre class="source lang-java linenums">package com.tus.logistics.service;
+
+public class Shipment {
+    private final int id;
+    private final String trackingNumber;
+    private final String customerEmail;
+    private final String address;
+    private boolean dispatched;
+    private boolean delivered;
+
+<span class="fc" id="L11">    public Shipment(int id, String trackingNumber, String customerEmail, String address) {</span>
+<span class="fc" id="L12">        this.id = id;</span>
+<span class="fc" id="L13">        this.trackingNumber = trackingNumber;</span>
+<span class="fc" id="L14">        this.customerEmail = customerEmail;</span>
+<span class="fc" id="L15">        this.address = address;</span>
+<span class="fc" id="L16">        this.dispatched = false;</span>
+<span class="fc" id="L17">        this.delivered =false;</span>
+
+<span class="fc" id="L19">    }</span>
+
+    public String getTrackingNumber() {
+<span class="fc" id="L22">        return trackingNumber;</span>
+    }
+
+    public String getCustomerEmail() {
+<span class="fc" id="L26">        return customerEmail;</span>
+    }
+
+    public boolean isDispatched() {
+<span class="fc" id="L30">        return dispatched;</span>
+    }
+
+    public void setDispatched(boolean dispatched) {
+<span class="fc" id="L34">        this.dispatched = dispatched;</span>
+<span class="fc" id="L35">    }</span>
+
+    public boolean hasValidAddress() {
+<span class="pc bpc" id="L38" title="1 of 4 branches missed.">        return address != null &amp;&amp; !address.trim().isEmpty();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

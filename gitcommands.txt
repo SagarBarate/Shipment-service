@@ -1,0 +1,47 @@
+# 1. Initialize local repository
+git init
+git add .
+git commit -m "Initial commit"
+
+# 2. Rename the default branch (master or main) to production
+# (Use the line corresponding to what Git created by default)
+git branch -m master production
+# OR if default was 'main':
+# git branch -m main production
+
+# 3. Connect to your new GitHub repo
+git remote add origin https://github.com/SagarBarate/microservice-cicd-pipeline.git
+git push -u origin production
+
+# (OPTIONAL) Remove the old default branch on the remote if it exists
+# git push origin :main  # or :master, whichever you had
+
+# 4. Create the 'staging' branch from 'production'
+git checkout production
+git checkout -b staging
+git push -u origin staging
+
+# 5. Create the 'development' branch from 'production'
+git checkout production
+git checkout -b development
+git push -u origin development
+
+# 6. Create three feature branches from 'development'
+
+# a) feature/login
+git checkout development
+git pull origin development
+git checkout -b feature/Notification
+git push -u origin feature/Notification
+
+# b) feature/dashboard
+git checkout development
+git pull origin development
+git checkout -b feature/customer
+git push -u origin feature/customer
+
+# c) feature/integrations
+git checkout development
+git pull origin development
+git checkout -b feature/integrations
+git push -u origin feature/integrations
