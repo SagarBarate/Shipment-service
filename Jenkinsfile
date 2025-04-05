@@ -26,10 +26,10 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 // Use the SonarQube server configured in Jenkins (replace 'MySonarQubeServer' with your server name)
-                withSonarQubeEnv('MySonarQubeServer') {
+                withSonarQubeEnv('myMicroservice') {
                     // Run Sonar analysis; update -Dsonar.projectKey to suit your naming
                     // If you want to run tests for coverage, remove "-DskipTests"
-                    sh "mvn sonar:sonar -Dsonar.projectKey=ShipmentService -DskipTests"
+                    sh "mvn sonar:sonar -Dsonar.projectKey=myMicroservice -DskipTests"
                 }
             }
         }
