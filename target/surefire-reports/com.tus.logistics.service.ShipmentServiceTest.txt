@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.tus.logistics.service.ShipmentServiceTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.079 s -- in com.tus.logistics.service.ShipmentServiceTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.952 s - in com.tus.logistics.service.ShipmentServiceTest
