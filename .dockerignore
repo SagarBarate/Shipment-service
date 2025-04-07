@@ -1,0 +1,16 @@
+# Ignore Git directory
+.git
+.gitignore
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE folders/files
+.idea
+*.iml
+
+# Optionally, ignore any other files that might have weird permissions
+README.md
+*.pdf
+*.log

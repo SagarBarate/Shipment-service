@@ -13,6 +13,7 @@ pipeline {
                 echo 'Git Checkout Completed'
             }
         }
+
         stage('Maven Build & Test') {
             steps {
                 // Run clean, test, package and generate JaCoCo coverage report.
@@ -20,6 +21,7 @@ pipeline {
                 echo 'Maven Build and Tests Completed'
             }
         }
+        
         stage('SonarQube Analysis') {
             steps {
                 withCredentials([string(credentialsId: 'SONAR_TOKEN', variable: 'SONAR_AUTH_TOKEN')]) {

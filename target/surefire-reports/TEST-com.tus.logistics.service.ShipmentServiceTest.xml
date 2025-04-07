@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.tus.logistics.service.ShipmentServiceTest" time="2.952" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.tus.logistics.service.ShipmentServiceTest" time="8.257" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Users\Sagar\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\latest\bin"/>
-    <property name="sun.java.command" value="C:\Users\Sagar\AppData\Local\Temp\surefire16210450817182315598\surefirebooter-20250405193122404_3.jar C:\Users\Sagar\AppData\Local\Temp\surefire16210450817182315598 2025-04-05T19-31-18_368-jvmRun1 surefire-20250405193122404_1tmp surefire_0-20250405193122404_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Sagar\AppData\Local\Temp\surefire2947428301266390371\surefirebooter-20250407233318623_3.jar C:\Users\Sagar\AppData\Local\Temp\surefire2947428301266390371 2025-04-07T23-33-15_846-jvmRun1 surefire-20250407233318623_1tmp surefire_0-20250407233318623_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Sagar\OneDrive\Desktop\Study\CICD\microservice-cicd-pipeline\Shipment-service\target\test-classes;C:\Users\Sagar\OneDrive\Desktop\Study\CICD\microservice-cicd-pipeline\Shipment-service\target\classes;C:\Users\Sagar\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\Sagar\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\Sagar\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Sagar\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\Sagar\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Sagar\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\Sagar\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\Sagar\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\Sagar\.m2\repository\org\mockito\mockito-core\5.10.0\mockito-core-5.10.0.jar;C:\Users\Sagar\.m2\repository\net\bytebuddy\byte-buddy\1.14.11\byte-buddy-1.14.11.jar;C:\Users\Sagar\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.11\byte-buddy-agent-1.14.11.jar;C:\Users\Sagar\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Sagar\.m2\repository\org\mockito\mockito-junit-jupiter\5.10.0\mockito-junit-jupiter-5.10.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Sagar\AppData\Local\Temp\surefire16210450817182315598\surefirebooter-20250405193122404_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Sagar\AppData\Local\Temp\surefire2947428301266390371\surefirebooter-20250407233318623_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="24+36"/>
@@ -59,7 +59,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="testDispatchShipment_NullShipment" classname="com.tus.logistics.service.ShipmentServiceTest" time="2.638">
+  <testcase name="testDispatchShipment_NullShipment" classname="com.tus.logistics.service.ShipmentServiceTest" time="7.665">
     <system-err><![CDATA[java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/sun/tools/attach/VirtualMachine with JaCoCo 0.8.11.202310140853/f33756c.
 	at org.jacoco.agent.rt.internal_4742761.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
@@ -188,11 +188,11 @@ WARNING: If a serviceability tool is not in use, please run with -Djdk.instrumen
 WARNING: Dynamic loading of agents will be disallowed by default in a future release
 ]]></system-err>
   </testcase>
-  <testcase name="testDispatchShipment_Success" classname="com.tus.logistics.service.ShipmentServiceTest" time="0.09"/>
-  <testcase name="testDispatchShipment_AlreadyDispatched" classname="com.tus.logistics.service.ShipmentServiceTest" time="0.009"/>
-  <testcase name="testDispatchShipment_LongTrackingNumber" classname="com.tus.logistics.service.ShipmentServiceTest" time="0.006"/>
-  <testcase name="testDispatchShipment_Failed_InvalidAddress" classname="com.tus.logistics.service.ShipmentServiceTest" time="0.005"/>
+  <testcase name="testDispatchShipment_Success" classname="com.tus.logistics.service.ShipmentServiceTest" time="0.315"/>
+  <testcase name="testDispatchShipment_AlreadyDispatched" classname="com.tus.logistics.service.ShipmentServiceTest" time="0.013"/>
+  <testcase name="testDispatchShipment_LongTrackingNumber" classname="com.tus.logistics.service.ShipmentServiceTest" time="0.019"/>
+  <testcase name="testDispatchShipment_Failed_InvalidAddress" classname="com.tus.logistics.service.ShipmentServiceTest" time="0.014"/>
   <testcase name="testDispatchShipment_EmptyTrackingNumber" classname="com.tus.logistics.service.ShipmentServiceTest" time="0.005"/>
-  <testcase name="testDispatchShipment_VerifyNotificationSent" classname="com.tus.logistics.service.ShipmentServiceTest" time="0.004"/>
+  <testcase name="testDispatchShipment_VerifyNotificationSent" classname="com.tus.logistics.service.ShipmentServiceTest" time="0.005"/>
   <testcase name="testDispatchShipment_VerifyRepositorySave" classname="com.tus.logistics.service.ShipmentServiceTest" time="0.004"/>
 </testsuite>

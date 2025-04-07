@@ -1,0 +1,34 @@
+- name: Deploy Shipment Service Container
+  hosts: deployment
+  become: yes
+  tasks:
+    - name: Ensure Docker is installed
+      package:
+        name: docker
+        state: present
+
+    - name: Start and enable Docker service
+      service:
+        name: docker
+        state: started
+        enabled: true
+
+    # Image pull task removed, assuming image is already present
+
+    - name: Remove existing shipment-service container if it exists
+      docker_container:
+        name: shipment-container
+        state: absent
+        force_kill: yes
+
+    - name: Run the shipment-service container
+      docker_container:
+        name: shipment-container
+    - name: Run the shipment-service container
+      docker_container:
+        name: shipment-container
+        image: sagarbarate/shipment-service:1.0.0
+        state: started
+        restart_policy: always
+        published_ports:
+          - "8080:8080"
